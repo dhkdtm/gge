@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>학교 상담 면접 핵심 전략 (School Counseling Interview Strategy)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700;900&display=swap');
+        
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background-color: #F3F4F6;
+            color: #1F2937;
+        }
+
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px; 
+            max-height: 400px;
+        }
+
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+
+        .card-shadow {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            transition: transform 0.2s;
+        }
+
+        .card-shadow:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        .gradient-text {
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-image: linear-gradient(to right, #2563EB, #F59E0B);
+        }
+    </style>
+    <!-- 
+        NARRATIVE PLAN:
+        1. Intro: Establish the "Professor" persona and goal (Interview Prep).
+        2. Theories: Expanded visual breakdown of Rogers, SFBT, Adler, CBT with detailed explanations.
+        3. Context: Radar Chart comparing School vs. General Counseling characteristics.
+        4. Scenarios: Visualizing the logic for high-stakes questions (Suicide, Resistance).
+        5. Conclusion: Encouraging closing statement.
+
+        CHART SELECTION JUSTIFICATION (NO SVG/MERMAID):
+        1. Rogers Attributes -> Doughnut Chart.
+        2. SFBT Questions -> Horizontal Bar.
+        3. Adler Encouragement -> Grouped Bar.
+        4. School vs General -> Radar Chart.
+        5. Suicide Response -> Pie Chart.
+        
+        PALETTE: Energetic & Playful (Blue #3B82F6, Amber #F59E0B, Emerald #10B981)
+        
+        CONFIRMATION: NEITHER Mermaid JS NOR SVG were used in this output. 
+    -->
+</head>
+<body class="bg-gray-50">
+
+    <!-- Header Section -->
+    <header class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-black text-blue-600 tracking-tight">EDU<span class="text-amber-500">COUNSEL</span></h1>
+            <nav class="hidden md:flex space-x-8 text-sm font-medium text-gray-500">
+                <a href="#theories" class="hover:text-blue-600 transition">핵심 이론</a>
+                <a href="#context" class="hover:text-blue-600 transition">학교 상담의 특수성</a>
+                <a href="#scenarios" class="hover:text-blue-600 transition">실전 면접 Q&A</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-16">
+
+        <!-- Intro -->
+        <section class="text-center space-y-4">
+            <span class="inline-block py-1 px-3 rounded-full bg-blue-100 text-blue-800 text-xs font-bold tracking-wider uppercase">Interview Prep Guide</span>
+            <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight">
+                학교 상담 면접 <br class="md:hidden" /> <span class="gradient-text">핵심 마스터</span>
+            </h2>
+            <p class="max-w-2xl mx-auto text-lg text-gray-600">
+                경인교대 교수가 전하는 예비 전문상담교사를 위한 합격 전략. <br>
+                이론적 지식을 넘어, <strong>"따뜻하고 단단한 어른"</strong>으로서의 태도를 시각화했습니다.
+            </p>
+        </section>
+
+        <!-- Section 1: Core Theories -->
+        <section id="theories" class="scroll-mt-24">
+            <div class="flex items-center mb-8">
+                <div class="w-2 h-8 bg-blue-600 mr-3 rounded"></div>
+                <h3 class="text-2xl font-bold text-gray-800">1. 면접 빈출 핵심 이론 (Top 4 상세)</h3>
+            </div>
+            <p class="mb-8 text-gray-600">학교 현장은 시간이 부족합니다. 즉각적이고 효과적인 개입을 위해 반드시 숙지해야 할 4가지 이론의 핵심 구조와 상세 내용을 정리했습니다.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <!-- Theory 1: Rogers -->
+                <div class="bg-white p-6 rounded-xl card-shadow border-t-4 border-blue-500">
+                    <h4 class="text-xl font-bold text-gray-800 mb-2">① 인간중심 상담 (Rogers)</h4>
+                    <p class="text-sm text-gray-500 mb-4">"관계가 치유다" - 학생이 스스로 성장하도록 돕는 토양을 만듭니다.</p>
+                    
+                    <ul class="space-y-2 mb-4 text-sm text-gray-700 bg-gray-50 p-3 rounded-lg">
+                        <li class="flex items-start"><span class="text-blue-500 mr-2">✔</span> <strong>일치성 (Genuineness):</strong> 상담자가 가면을 쓰지 않고 솔직하게 반응함.</li>
+                        <li class="flex items-start"><span class="text-amber-500 mr-2">✔</span> <strong>무조건적 긍정적 존중:</strong> 행동은 비판하되 학생의 존재 자체는 수용함.</li>
+                        <li class="flex items-start"><span class="text-emerald-500 mr-2">✔</span> <strong>공감적 이해:</strong> 학생의 내면을 마치 '나의 것'처럼 깊이 느낌.</li>
+                    </ul>
+
+                    <div class="chart-container">
+                        <canvas id="rogersChart"></canvas>
+                    </div>
+                    <div class="mt-4 p-3 bg-blue-50 rounded text-sm text-blue-800">
+                        <strong>Tip:</strong> "비행 청소년이라도 그 이면의 욕구를 이해하고 존중하는 태도로 라포를 형성하겠습니다"라고 답변하세요.
+                    </div>
+                </div>
+
+                <!-- Theory 2: SFBT -->
+                <div class="bg-white p-6 rounded-xl card-shadow border-t-4 border-amber-500">
+                    <h4 class="text-xl font-bold text-gray-800 mb-2">② 해결중심 단기상담 (SFBT)</h4>
+                    <p class="text-sm text-gray-500 mb-4">"문제보다 해결책" - 원인을 파헤치기보다 성공 경험에 집중합니다.</p>
+
+                    <div class="grid grid-cols-1 gap-2 mb-4 text-sm">
+                        <div class="p-2 bg-amber-50 rounded border border-amber-100">
+                            <strong>✨ 기적 질문:</strong> "문제가 해결된 미래를 상상해볼래?" (희망 고취)
+                        </div>
+                        <div class="p-2 bg-amber-50 rounded border border-amber-100">
+                            <strong>📊 척도 질문:</strong> "지금 상태는 몇 점이니? 1점 올리려면 뭘 할까?" (구체화)
+                        </div>
+                        <div class="p-2 bg-amber-50 rounded border border-amber-100">
+                            <strong>🔍 예외 질문:</strong> "문제가 없었던 때는 언제니?" (성공 자원 발견)
+                        </div>
+                    </div>
+
+                    <div class="chart-container">
+                        <canvas id="sfbtChart"></canvas>
+                    </div>
+                    <div class="mt-4 p-3 bg-amber-50 rounded text-sm text-amber-800">
+                        <strong>Tip:</strong> 상담 회기가 짧은 학교 현장에서 가장 실용적인 접근법임을 강조하세요.
+                    </div>
+                </div>
+
+                <!-- Theory 3: Adler -->
+                <div class="bg-white p-6 rounded-xl card-shadow border-t-4 border-emerald-500">
+                    <h4 class="text-xl font-bold text-gray-800 mb-2">③ 아들러 개인심리학</h4>
+                    <p class="text-sm text-gray-500 mb-4">"모든 행동에는 목적이 있다" - 칭찬이 아닌 격려가 필요합니다.</p>
+
+                    <div class="overflow-hidden rounded-lg border border-gray-200 mb-4">
+                        <table class="min-w-full text-xs text-left text-gray-500">
+                            <thead class="bg-gray-100 text-gray-700 uppercase font-bold">
+                                <tr>
+                                    <th class="px-3 py-2">구분</th>
+                                    <th class="px-3 py-2">칭찬 (Praise)</th>
+                                    <th class="px-3 py-2 text-emerald-600">격려 (Encouragement)</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-200">
+                                <tr>
+                                    <td class="px-3 py-2 font-bold">초점</td>
+                                    <td class="px-3 py-2">결과, 재능</td>
+                                    <td class="px-3 py-2 font-bold text-emerald-600">노력, 과정</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-3 py-2 font-bold">메시지</td>
+                                    <td class="px-3 py-2">"참 잘했어" (평가)</td>
+                                    <td class="px-3 py-2 font-bold text-emerald-600">"고마워, 힘이 되네"</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="chart-container">
+                        <canvas id="adlerChart"></canvas>
+                    </div>
+                    <div class="mt-4 p-3 bg-emerald-50 rounded text-sm text-emerald-800">
+                        <strong>Tip:</strong> 학생이 실패했을 때도 용기를 잃지 않도록 '존재'와 '노력'을 격려하겠다고 답변하세요.
+                    </div>
+                </div>
+
+                <!-- Theory 4: CBT (HTML Implementation for Process) -->
+                <div class="bg-white p-6 rounded-xl card-shadow border-t-4 border-indigo-500">
+                    <h4 class="text-xl font-bold text-gray-800 mb-2">④ 인지행동 치료 (REBT/CBT)</h4>
+                    <p class="text-sm text-gray-500 mb-4">"생각이 감정을 만든다" - 사건(A) 자체가 아니라 해석(B)이 고통(C)의 원인입니다.</p>
+                    
+                    <div class="space-y-3 mt-6">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 flex-shrink-0 bg-gray-200 text-gray-600 rounded-full flex items-center justify-center font-bold">A</div>
+                            <div class="ml-4 flex-1 p-3 bg-gray-50 rounded-lg border border-gray-100">
+                                <span class="text-xs font-bold text-indigo-600 block">선행 사건 (Event)</span>
+                                <span class="text-sm text-gray-700">시험을 망쳤다.</span>
+                            </div>
+                        </div>
+                        <!-- Arrow -->
+                        <div class="flex justify-center -my-1 text-gray-300 text-xl">↓</div>
+
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 flex-shrink-0 bg-red-100 text-red-600 rounded-full flex items-center justify-center font-bold border-2 border-red-200">B</div>
+                            <div class="ml-4 flex-1 p-3 bg-red-50 rounded-lg border border-red-100">
+                                <span class="text-xs font-bold text-red-600 block">비합리적 신념 (Belief) - 핵심 원인!</span>
+                                <span class="text-sm text-gray-700">"나는 실패자야. 부모님이 날 미워하실 거야."</span>
+                            </div>
+                        </div>
+                         <!-- Arrow -->
+                         <div class="flex justify-center -my-1 text-gray-300 text-xl">↓</div>
+
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 flex-shrink-0 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center font-bold border-2 border-blue-200">D</div>
+                            <div class="ml-4 flex-1 p-3 bg-blue-50 rounded-lg border border-blue-100">
+                                <span class="text-xs font-bold text-blue-600 block">논박 (Dispute) - 상담자의 역할</span>
+                                <span class="text-sm text-gray-700">"시험 한 번이 인생 전체를 결정하나? 근거가 있나?"</span>
+                            </div>
+                        </div>
+                         <!-- Arrow -->
+                         <div class="flex justify-center -my-1 text-gray-300 text-xl">↓</div>
+
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 flex-shrink-0 bg-green-100 text-green-600 rounded-full flex items-center justify-center font-bold border-2 border-green-200">E</div>
+                            <div class="ml-4 flex-1 p-3 bg-green-50 rounded-lg border border-green-100">
+                                <span class="text-xs font-bold text-green-600 block">효과 (Effect)</span>
+                                <span class="text-sm text-gray-700">"속상하지만 다음엔 더 노력해보자." (건강한 감정)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Section 2: Context Comparison -->
+        <section id="context" class="scroll-mt-24">
+            <div class="flex items-center mb-8">
+                <div class="w-2 h-8 bg-amber-500 mr-3 rounded"></div>
+                <h3 class="text-2xl font-bold text-gray-800">2. 학교 상담의 특수성 (필수 암기)</h3>
+            </div>
+            
+            <div class="bg-white p-8 rounded-xl card-shadow">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+                    <div>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            일반 상담과 달리 학교 상담은 <strong>이중 관계(교사+상담자)</strong>와 <strong>제한적 비밀보장</strong>이라는 독특한 특성을 가집니다. 면접관은 이 차이를 명확히 인지하고 있는지를 반드시 확인합니다.
+                        </p>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <span class="flex-shrink-0 h-6 w-6 flex items-center justify-center rounded-full bg-blue-100 text-blue-600 font-bold text-xs mt-0.5">1</span>
+                                <span class="ml-3 text-sm text-gray-700"><strong>대상:</strong> 자발적 내담자뿐만 아니라, 오기 싫어하는 <strong>비자발적 학생</strong>도 포함됩니다.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="flex-shrink-0 h-6 w-6 flex items-center justify-center rounded-full bg-blue-100 text-blue-600 font-bold text-xs mt-0.5">2</span>
+                                <span class="ml-3 text-sm text-gray-700"><strong>목표:</strong> 단순 심리 치료를 넘어 <strong>학교 적응, 학업, 진로</strong>까지 포괄합니다.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="flex-shrink-0 h-6 w-6 flex items-center justify-center rounded-full bg-red-100 text-red-600 font-bold text-xs mt-0.5">3</span>
+                                <span class="ml-3 text-sm text-gray-700"><strong>비밀보장 예외:</strong> 자살, 자해, 타해 위험 시 <strong>반드시 보호자와 학교에 알려야</strong> 합니다.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="comparisonRadar"></canvas>
+                        <p class="text-center text-xs text-gray-400 mt-2">* 일반상담 vs 학교상담 특성 비교 (점수가 높을수록 해당 특성이 강함)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Scenarios -->
+        <section id="scenarios" class="scroll-mt-24">
+            <div class="flex items-center mb-8">
+                <div class="w-2 h-8 bg-emerald-500 mr-3 rounded"></div>
+                <h3 class="text-2xl font-bold text-gray-800">3. 실전 면접 시뮬레이션</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                
+                <!-- Q1: Involuntary -->
+                <div class="bg-white rounded-xl overflow-hidden card-shadow flex flex-col">
+                    <div class="bg-gray-100 p-4 border-b border-gray-200">
+                        <span class="text-xs font-bold text-gray-500 uppercase">Scenario 01</span>
+                        <h5 class="font-bold text-gray-800 text-lg">상담 거부 학생</h5>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div class="space-y-4 mb-6">
+                            <div class="flex items-center p-3 bg-blue-50 rounded-lg">
+                                <span class="text-2xl mr-3">🎮</span>
+                                <div>
+                                    <p class="text-xs text-blue-800 font-bold">Step 1: 관심사 접근</p>
+                                    <p class="text-sm text-gray-600">게임, 연예인 이야기로 라포 형성</p>
+                                </div>
+                            </div>
+                            <div class="flex justify-center text-gray-300">▼</div>
+                            <div class="flex items-center p-3 bg-blue-50 rounded-lg">
+                                <span class="text-2xl mr-3">🛡</span>
+                                <div>
+                                    <p class="text-xs text-blue-800 font-bold">Step 2: 안전지대 확인</p>
+                                    <p class="text-sm text-gray-600">"여기는 네 편이 되어주는 곳이야"</p>
+                                </div>
+                            </div>
+                            <div class="flex justify-center text-gray-300">▼</div>
+                            <div class="flex items-center p-3 bg-blue-50 rounded-lg">
+                                <span class="text-2xl mr-3">🎨</span>
+                                <div>
+                                    <p class="text-xs text-blue-800 font-bold">Step 3: 매체 활용</p>
+                                    <p class="text-sm text-gray-600">보드게임, 그림으로 부담 낮추기</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-sm text-gray-500 italic border-t pt-4">"침묵도 존중하며 기다려주는 태도를 보여주세요."</p>
+                    </div>
+                </div>
+
+                <!-- Q2: Suicide Risk (Pie Chart) -->
+                <div class="bg-white rounded-xl overflow-hidden card-shadow flex flex-col md:col-span-2">
+                    <div class="bg-red-50 p-4 border-b border-red-100 flex justify-between items-center">
+                        <div>
+                            <span class="text-xs font-bold text-red-500 uppercase">Scenario 02 (Critical)</span>
+                            <h5 class="font-bold text-gray-800 text-lg">자살 위기 학생 ("죽고 싶어요")</h5>
+                        </div>
+                        <span class="px-3 py-1 bg-red-200 text-red-800 text-xs font-bold rounded-full">비밀보장 예외</span>
+                    </div>
+                    <div class="p-6 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                        <div class="chart-container" style="height: 250px;">
+                            <canvas id="suicideChart"></canvas>
+                        </div>
+                        <div>
+                            <h6 class="font-bold text-gray-800 mb-3">대처 우선순위 전략</h6>
+                            <ul class="space-y-3">
+                                <li class="flex items-start">
+                                    <span class="w-3 h-3 bg-red-500 rounded-full mt-1.5 mr-2"></span>
+                                    <span class="text-sm text-gray-700"><strong>생명 보호 (50%):</strong> 무엇보다 우선입니다. 위기관리 위원회 소집, 24시간 보호 체계 마련이 핵심입니다.</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="w-3 h-3 bg-blue-500 rounded-full mt-1.5 mr-2"></span>
+                                    <span class="text-sm text-gray-700"><strong>심리적 안정 (30%):</strong> 학생의 용기에 고마움을 표하고 현재의 불안을 낮춥니다.</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="w-3 h-3 bg-gray-400 rounded-full mt-1.5 mr-2"></span>
+                                    <span class="text-sm text-gray-700"><strong>보호자/교사 통보 (20%):</strong> 학생에게 "너를 살리기 위해 알려야 함"을 명확히 설명하고 동의를 구합니다.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Q3: Angry Parent -->
+                <div class="bg-white rounded-xl overflow-hidden card-shadow flex flex-col">
+                    <div class="bg-gray-100 p-4 border-b border-gray-200">
+                        <span class="text-xs font-bold text-gray-500 uppercase">Scenario 03</span>
+                        <h5 class="font-bold text-gray-800 text-lg">항의하는 학부모</h5>
+                    </div>
+                    <div class="p-6">
+                        <div class="mb-4">
+                            <h6 class="font-bold text-gray-700 mb-2">핵심: 공감 후 역할 분리</h6>
+                            <p class="text-sm text-gray-600">감정은 충분히 수용하되, 행정 처리와 상담 영역을 명확히 구분해야 합니다.</p>
+                        </div>
+                        <div class="space-y-2">
+                            <div class="p-3 bg-gray-50 rounded border-l-4 border-amber-500">
+                                <p class="text-xs font-bold text-amber-600">Step 1: 경청 & 공감</p>
+                                <p class="text-xs text-gray-500">"얼마나 속상하셨습니까..."</p>
+                            </div>
+                            <div class="p-3 bg-gray-50 rounded border-l-4 border-blue-500">
+                                <p class="text-xs font-bold text-blue-600">Step 2: 객관적 정보</p>
+                                <p class="text-xs text-gray-500">학생 심리 상태 전달</p>
+                            </div>
+                            <div class="p-3 bg-gray-50 rounded border-l-4 border-emerald-500">
+                                <p class="text-xs font-bold text-emerald-600">Step 3: 역할 안내</p>
+                                <p class="text-xs text-gray-500">사안처리(책임교사) vs 치유(상담교사)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Q4: Teacher Cooperation -->
+                <div class="bg-white rounded-xl overflow-hidden card-shadow flex flex-col md:col-span-2">
+                    <div class="bg-gray-100 p-4 border-b border-gray-200">
+                        <span class="text-xs font-bold text-gray-500 uppercase">Scenario 04</span>
+                        <h5 class="font-bold text-gray-800 text-lg">담임 교사와의 협력</h5>
+                    </div>
+                    <div class="p-6 flex flex-col md:flex-row items-center gap-6">
+                        <div class="flex-1">
+                            <div class="flex items-center justify-center h-24 w-24 rounded-full bg-indigo-100 text-4xl mb-4 mx-auto md:mx-0">
+                                🤝
+                            </div>
+                        </div>
+                        <div class="flex-[3]">
+                            <h6 class="font-bold text-indigo-700 mb-2">One-Team Approach</h6>
+                            <p class="text-sm text-gray-600 mb-4">
+                                담임 선생님은 학생을 가장 잘 아는 파트너입니다. 
+                                <br><strong>"교육적으로 필요한 범위 내"</strong>에서 정보를 공유하여, 교실과 상담실이 일관된 지도를 할 수 있도록 돕겠다는 점을 강조하세요.
+                            </p>
+                            <div class="bg-indigo-50 p-3 rounded text-xs text-indigo-800 font-bold text-center">
+                                "비밀보장은 지키되, 학생 지도에 필수적인 정보는 공유한다."
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Footer / Advice -->
+        <footer class="bg-gradient-to-r from-blue-600 to-indigo-700 rounded-2xl shadow-xl p-8 md:p-12 text-center text-white space-y-6 mt-12">
+            <h3 class="text-2xl md:text-3xl font-bold">"잠시 생각할 시간을 주시겠습니까?"</h3>
+            <p class="text-blue-100 max-w-2xl mx-auto leading-relaxed">
+                면접관은 완벽한 지식인이 아니라, 우리 학교 아이들을 믿고 맡길 수 있는 <strong>따뜻하고 단단한 어른</strong>을 찾습니다. <br>
+                답변이 막힐 땐 당황하지 말고 양해를 구한 뒤, <br>
+                <strong>"학생의 입장에서 다시 생각해보겠습니다"</strong>라고 말하세요. <br>
+                그 진심이 합격의 열쇠입니다.
+            </p>
+            <div class="pt-4">
+                <span class="inline-block py-2 px-6 rounded-full bg-white text-blue-700 font-bold shadow-md">
+                    예비 전문상담교사님을 응원합니다!
+                </span>
+            </div>
+        </footer>
+
+    </main>
+
+    <script>
+        // --- Utility: Label Wrapping for Chart.js (Mandatory) ---
+        function splitLabel(label, maxLength = 16) {
+            if (label.length <= maxLength) return label;
+            const words = label.split(' ');
+            const lines = [];
+            let currentLine = words[0];
+
+            for (let i = 1; i < words.length; i++) {
+                if (currentLine.length + 1 + words[i].length <= maxLength) {
+                    currentLine += ' ' + words[i];
+                } else {
+                    lines.push(currentLine);
+                    currentLine = words[i];
+                }
+            }
+            lines.push(currentLine);
+            return lines;
+        }
+
+        // --- Common Config: Tooltips (Mandatory) ---
+        Chart.defaults.plugins.tooltip.callbacks.title = function(tooltipItems) {
+            const item = tooltipItems[0];
+            let label = item.chart.data.labels[item.dataIndex];
+            if (Array.isArray(label)) {
+                return label.join(' ');
+            } else {
+                return label;
+            }
+        };
+
+        // --- Chart 1: Rogers (Doughnut) ---
+        const ctxRogers = document.getElementById('rogersChart').getContext('2d');
+        new Chart(ctxRogers, {
+            type: 'doughnut',
+            data: {
+                labels: ['일치성 (Genuineness)', '무조건적 긍정적 존중', '공감적 이해 (Empathy)'],
+                datasets: [{
+                    data: [33, 33, 33],
+                    backgroundColor: ['#3B82F6', '#F59E0B', '#10B981'],
+                    borderWidth: 0,
+                    hoverOffset: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { position: 'bottom', labels: { boxWidth: 12, padding: 15 } }
+                }
+            }
+        });
+
+        // --- Chart 2: SFBT (Horizontal Bar) ---
+        const ctxSfbt = document.getElementById('sfbtChart').getContext('2d');
+        const sfbtLabels = [
+            '기적 질문 ("자고 일어났더니 해결됐다면?")', 
+            '척도 질문 ("지금 상태는 10점 만점에?")', 
+            '예외 질문 ("문제가 없던 때는 언제?")'
+        ].map(l => splitLabel(l, 25)); // Slightly wider limit for bar chart
+
+        new Chart(ctxSfbt, {
+            type: 'bar',
+            data: {
+                labels: sfbtLabels,
+                datasets: [{
+                    label: '활용도 및 중요성',
+                    data: [85, 90, 75], // Conceptual utilization score
+                    backgroundColor: ['#FCD34D', '#F59E0B', '#D97706'],
+                    borderRadius: 4
+                }]
+            },
+            options: {
+                indexAxis: 'y',
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false }
+                },
+                scales: {
+                    x: { display: false, max: 100 },
+                    y: { grid: { display: false } }
+                }
+            }
+        });
+
+        // --- Chart 3: Adler (Grouped Bar) ---
+        const ctxAdler = document.getElementById('adlerChart').getContext('2d');
+        new Chart(ctxAdler, {
+            type: 'bar',
+            data: {
+                labels: ['초점 (Focus)', '방향 (Direction)', '효과 (Effect)'],
+                datasets: [
+                    {
+                        label: '칭찬 (Praise)',
+                        data: [30, 40, 30], // Conceptual: Result, External, Dependence
+                        backgroundColor: '#E5E7EB',
+                        order: 2
+                    },
+                    {
+                        label: '격려 (Encouragement)',
+                        data: [90, 95, 90], // Conceptual: Process/Effort, Internal, Independence
+                        backgroundColor: '#10B981',
+                        order: 1
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { position: 'top' },
+                    tooltip: {
+                        callbacks: {
+                            afterBody: function(context) {
+                                const idx = context[0].dataIndex;
+                                if(idx === 0) return "칭찬: 결과 중심 vs 격려: 과정/노력 중심";
+                                if(idx === 1) return "칭찬: 타인의 평가 vs 격려: 자신의 만족";
+                                if(idx === 2) return "칭찬: 의존성 증가 vs 격려: 용기와 자립";
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: { display: false, beginAtZero: true },
+                    x: { grid: { display: false } }
+                }
+            }
+        });
+
+        // --- Chart 4: School vs General (Radar) ---
+        const ctxRadar = document.getElementById('comparisonRadar').getContext('2d');
+        const radarLabels = ['비자발적 내담자 비율', '예방 및 교육적 범위', '이중 관계의 복잡성', '비밀보장의 제한성'].map(l => splitLabel(l, 15));
+
+        new Chart(ctxRadar, {
+            type: 'radar',
+            data: {
+                labels: radarLabels,
+                datasets: [{
+                    label: '학교 상담',
+                    data: [9, 9, 8, 9], // High intensity in these areas
+                    fill: true,
+                    backgroundColor: 'rgba(59, 130, 246, 0.2)',
+                    borderColor: '#3B82F6',
+                    pointBackgroundColor: '#3B82F6',
+                    pointBorderColor: '#fff',
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderColor: '#3B82F6'
+                }, {
+                    label: '일반 성인 상담',
+                    data: [3, 4, 2, 2], // Lower intensity/complexity in these specific constraints
+                    fill: true,
+                    backgroundColor: 'rgba(209, 213, 219, 0.2)',
+                    borderColor: '#9CA3AF',
+                    pointBackgroundColor: '#9CA3AF',
+                    pointBorderColor: '#fff',
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderColor: '#9CA3AF'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                elements: {
+                    line: { borderWidth: 3 }
+                },
+                scales: {
+                    r: {
+                        angleLines:
